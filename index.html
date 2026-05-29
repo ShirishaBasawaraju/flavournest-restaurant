@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>FlavourNest Restaurant</title>
+
+  <link rel="stylesheet" href="style.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <!-- NAV -->
+  <header>
+    <nav>
+      <div class="logo">FlavourNest 🍽️</div>
+
+      <ul id="navLinks">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#menu">Menu</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#reviews">Rating</a></li>
+      </ul>
+
+      <div class="hamburger" onclick="toggleMenu()">☰</div>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <section id="home" class="hero">
+    <div class="hero-text">
+      <h1>Delicious Food, <span>Happy Mood</span></h1>
+      <p>Experience authentic taste of Hyderabad with fresh & delicious food.</p>
+
+      <a href="#menu" class="btn">Explore Menu</a>
+    </div>
+  </section>
+
+  <!-- MENU -->
+  <section id="menu" class="section">
+
+    <h2>🔥 Telangana Hyderabad Special Menu</h2>
+    <p class="subtext">Authentic street food & traditional dishes 🍽️</p>
+
+    <div class="grid">
+
+      <!-- 20 HYDERABAD ITEMS -->
+
+      <div class="card"><h3>Hyderabadi Biryani</h3><p>Fragrant rice & spicy chicken.</p><span>₹299</span><button onclick="addToCart('Hyderabadi Biryani',299)">Add to Cart</button></div>
+
+      <div class="card"><h3>Chicken Dum Biryani</h3><p>Slow cooked dum style biryani.</p><span>₹329</span><button onclick="addToCart('Chicken Dum Biryani',329)">Add to Cart</button></div>
+
+      <div class="card"><h3>Mutton Biryani</h3><p>Rich & juicy mutton biryani.</p><span>₹399</span><button onclick="addToCart('Mutton Biryani',399)">Add to Cart</button></div>
+
+      <div class="card"><h3>Egg Biryani</h3><p>Spicy boiled egg biryani.</p><span>₹199</span><button onclick="addToCart('Egg Biryani',199)">Add to Cart</button></div>
+
+      <div class="card"><h3>Mirchi Bajji</h3><p>Spicy chilli fritters.</p><span>₹59</span><button onclick="addToCart('Mirchi Bajji',59)">Add to Cart</button></div>
+
+      <div class="card"><h3>Samosa</h3><p>Crispy snack with chutney.</p><span>₹30</span><button onclick="addToCart('Samosa',30)">Add to Cart</button></div>
+
+      <div class="card"><h3>Chicken 65</h3><p>Spicy fried chicken starter.</p><span>₹199</span><button onclick="addToCart('Chicken 65',199)">Add to Cart</button></div>
+
+      <div class="card"><h3>Hyderabadi Haleem</h3><p>Slow cooked wheat & meat delicacy.</p><span>₹249</span><button onclick="addToCart('Haleem',249)">Add to Cart</button></div>
+
+      <div class="card"><h3>Veg Biryani</h3><p>Flavorful vegetable biryani.</p><span>₹179</span><button onclick="addToCart('Veg Biryani',179)">Add to Cart</button></div>
+
+      <div class="card"><h3>Chicken Lollipop</h3><p>Crispy Indo-Chinese starter.</p><span>₹220</span><button onclick="addToCart('Chicken Lollipop',220)">Add to Cart</button></div>
+
+      <div class="card"><h3>Irani Chai</h3><p>Famous Hyderabad tea.</p><span>₹40</span><button onclick="addToCart('Irani Chai',40)">Add to Cart</button></div>
+
+      <div class="card"><h3>Osmania Biscuit</h3><p>Classic Hyderabad bakery snack.</p><span>₹25</span><button onclick="addToCart('Osmania Biscuit',25)">Add to Cart</button></div>
+
+      <div class="card"><h3>Double Ka Meetha</h3><p>Sweet bread dessert.</p><span>₹120</span><button onclick="addToCart('Double Ka Meetha',120)">Add to Cart</button></div>
+
+      <div class="card"><h3>Qubani Ka Meetha</h3><p>Apricot dessert.</p><span>₹150</span><button onclick="addToCart('Qubani Ka Meetha',150)">Add to Cart</button></div>
+
+      <div class="card"><h3>Shawarma</h3><p>Middle Eastern wrap with Indian touch.</p><span>₹120</span><button onclick="addToCart('Shawarma',120)">Add to Cart</button></div>
+
+      <div class="card"><h3>Chicken Shawarma</h3><p>Juicy chicken wrap.</p><span>₹140</span><button onclick="addToCart('Chicken Shawarma',140)">Add to Cart</button></div>
+
+      <div class="card"><h3>Paneer 65</h3><p>Spicy crispy paneer starter.</p><span>₹189</span><button onclick="addToCart('Paneer 65',189)">Add to Cart</button></div>
+
+      <div class="card"><h3>Malai Kebab</h3><p>Soft creamy chicken kebabs.</p><span>₹220</span><button onclick="addToCart('Malai Kebab',220)">Add to Cart</button></div>
+
+      <div class="card"><h3>Tandoori Chicken</h3><p>Smoky grilled chicken.</p><span>₹280</span><button onclick="addToCart('Tandoori Chicken',280)">Add to Cart</button></div>
+
+      <div class="card"><h3>Fruit Custard</h3><p>Sweet dessert with fruits.</p><span>₹110</span><button onclick="addToCart('Fruit Custard',110)">Add to Cart</button></div>
+
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="about">
+    <h2>About FlavourNest</h2>
+
+    <div class="about-container">
+      <div class="about-box"><h3>Who We Are</h3><p>Authentic Hyderabad food brand.</p></div>
+      <div class="about-box"><h3>Mission</h3><p>Deliver street food digitally.</p></div>
+      <div class="about-box"><h3>Why Us</h3><p>Fresh, tasty, hygienic food.</p></div>
+      <div class="about-box"><h3>Vision</h3><p>Best food platform in India.</p></div>
+    </div>
+  </section>
+
+  <section id="reviews" class="section">
+
+  <h2>⭐ Customer Reviews</h2>
+  <p class="subtext">Share your experience with FlavourNest 🍽️</p>
+
+  <!-- REVIEW FORM -->
+  <div class="review-form">
+
+    <input type="text" id="name" placeholder="Your Name">
+
+    <select id="rating">
+      <option value="5">⭐⭐⭐⭐⭐ (5)</option>
+      <option value="4">⭐⭐⭐⭐ (4)</option>
+      <option value="3">⭐⭐⭐ (3)</option>
+      <option value="2">⭐⭐ (2)</option>
+      <option value="1">⭐ (1)</option>
+    </select>
+
+    <textarea id="comment" placeholder="Write your review..."></textarea>
+
+    <button onclick="addReview()">Submit Review</button>
+
+  </div>
+
+  <!-- DISPLAY REVIEWS -->
+  <div id="reviewList"></div>
+
+</section>
+
+  <!-- CART -->
+  <div class="cart">
+    <h2>🛒 Your Order</h2>
+    <div id="cartItems"></div>
+    <h3>Total: ₹<span id="total">0</span></h3>
+    <button onclick="placeOrder()">Place Order</button>
+  </div>
+
+  <footer>
+    <p>© 2026 FlavourNest Restaurant</p>
+  </footer>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
